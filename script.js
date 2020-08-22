@@ -15,7 +15,7 @@ class UI {
         myLibrary.forEach(book => UI.addBookToDiv(book))}
     
     static addBookToDiv(book) {
-            const mainDiv = document.querySelector('.books');
+            const mainDiv = document.querySelector('.wrapper');
             const newBook = document.createElement('div');
             const newBookCover = document.createElement('div');
             const newTitle = document.createElement('p');
@@ -26,10 +26,12 @@ class UI {
             newTitle.textContent = book.title;
             newAuthor.textContent = book.author;
             newBookmark.textContent = book.read;
-            newDeleteButton.textContent = 'delete';
+            newDeleteButton.textContent = 'X';
 
             newBook.classList.add('book');
             newBookCover.classList.add('cover');
+            newTitle.classList.add('bookTitle');
+            newAuthor.classList.add('bookAuthor');
             newDeleteButton.classList.add('delete');
             newBookmark.classList.add('bookmark');
             if (book.read == 'unread') newBookmark.classList.add('unread');
@@ -40,6 +42,14 @@ class UI {
             newBook.appendChild(newBookmark);
             newBook.appendChild(newDeleteButton);
             mainDiv.appendChild(newBook);
+
+            // bookcover colors
+            let bookCovers = document.querySelectorAll(".cover");
+            bookCovers.forEach((book, i) => {
+                i = i % 7;
+                if (i>6) i-=7;
+                book.classList.add(`color${i}`);
+            })
         }
 
     static addNewBook(book) {
@@ -93,12 +103,11 @@ addForm.addEventListener("submit", (e) => {
 })
 
 // Event: change bookmark status
-document.querySelector(".books").addEventListener('click', (e) => {
+document.querySelector(".wrapper").addEventListener('click', (e) => {
     UI.changeReadStatus(e.target);
 })
 
 // Event: delete book
-document.querySelector(".books").addEventListener('click', (e) => {
+document.querySelector(".wrapper").addEventListener('click', (e) => {
     UI.deleteBook(e.target);
 })
-

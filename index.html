@@ -4,25 +4,36 @@
         <meta charset = "UTF-8">
         <title>Library</title>
         <link href = "style.css" rel = "stylesheet"></href> 
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;1,400;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Raleway:ital,wght@0,100;0,200;0,400;0,900;1,100;1,500;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header><span>My Bookshelf</span></header>
-        <nav>
-            <span>Add a new book</span>
-            <form>
-                <label for="title">Title:</label>
-                <input type="text" id="title">
-                <label for="author">Author:</label>
-                <input type="text" id="author">
-                <input type="radio" name="status" id="read" value="read" checked>
-                <label for="read">Read</label>
-                <input type="radio" name="status" id="unread" value="unread">
-                <label for="unread">Unread</label>
-                <input type="submit">
-            </form>
-        </nav>
-        <div class = "books"></div>
+        <header>
+            <div class="headerShelf"></div>
+            <span class="title">MY<br>BOOKSHELF</span>
+            <div class="myName">
+                <h2 class="firstName">Lauren</h2>
+                <h2 class="lastName">Hanano</h2>
+            </div>
+        </header>
+        <div class = "wrapper">
+            <div class = "book">
+            <div class = "cover form">
+                <span>Add a new book</span>
+                <form>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author">
+                    <input type="radio" name="status" id="read" value="read" checked>
+                    <label for="read">Read</label>
+                    <input type="radio" name="status" id="unread" value="unread">
+                    <label for="unread">Unread</label>
+                    <input type="submit">
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class ="mainShelf"></div>
         <script src = "script.js"></script>
     </body>
 </html>
