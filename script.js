@@ -70,6 +70,12 @@ class UI {
             element.parentElement.remove();
         }
     }
+
+    static clearForm() {
+        document.forms[0][0].value = '';
+        document.forms[0][1].value = '';
+        document.forms[0][2].checked = true;
+    }
 }
 
 
@@ -100,6 +106,7 @@ addForm.addEventListener("submit", (e) => {
     book = new Book(title, author, status);
     UI.addNewBook(book);
     UI.addBookToDiv(book);
+    UI.clearForm();
 })
 
 // Event: change bookmark status

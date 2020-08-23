@@ -29,19 +29,8 @@ header {
     margin-top: 20px;
 }
 
-/*
-.headerShelf {
-    margin: 45px 0px 80px 0px;
-    height: 25px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 6px 12px 2px rgba(0, 0, 0, 0.2),
-                inset 0px -7px 0px rgba(0, 0, 0, 0.03);
-}
-*/
-
 .title {
     position: fixed;
-    z-index: 1;
     top: 40px;
     left: 80px;
     color: rgb(255, 186, 212);
@@ -49,6 +38,7 @@ header {
     font-weight: 400;
     line-height: 75%;
     text-shadow: 0;
+    z-index: 1;
 }
 
 .myName {
@@ -58,7 +48,7 @@ header {
     justify-content: center;
     align-content: center;
     right: 48px;
-    top: 20px;
+    top: 40px;
     color: rgb(255, 186, 212);
     font-size: 12px;
     text-align: center;
@@ -87,10 +77,10 @@ header {
 
 .book {
     font-family: 'Raleway', san-serif;
-    z-index: 3;
     height: 350px;
     width: 220px;
     margin: 22px;
+    z-index: 2;
 }
 
 .cover {
@@ -101,10 +91,12 @@ header {
     height: 92%;
     width: 220px;
     border: 0px solid blue;
-    padding: 20px;
+    padding: 50px 20px 20px 20px;
     box-shadow: 8px 2px 7px 0px rgba(0, 0, 0, 0.1),
                 0px 2px 2px 1px rgba(0, 0, 0, 0.3),
                 inset 15px 0px 1px 0px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
 }
 
 .form {
@@ -176,15 +168,23 @@ input[type=submit]:active {
 }
 
 .bookTitle{
-    position: absolute;
-    top: 25px; 
-    right: 0; left: 0;
-    padding: 0px 10px 0px 25px;
-    text-align: center;
+    display: inline;
+    position: relative;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 70%, rgb(255, 186, 212) 55%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: background-size .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
     font-size: 35px;
     font-weight: 900;
     font-style: italic;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+.bookTitle:hover {
+    background-size: 0;
+    transition: background-size .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
 }
 
 .bookAuthor{
@@ -199,11 +199,12 @@ input[type=submit]:active {
 }
 
 .bookmark {
-    display: none;
+    opacity: 0;
+    display: block;
     left: 18px;
     text-align: center;
-    height: 8%;
-    width: 58px;
+    height: 28px;
+    width: 58px;;
     padding-top: 5px;
     cursor: pointer;
     background-color: rgb(201, 255, 188);
@@ -214,7 +215,7 @@ input[type=submit]:active {
 }
 
 .book:hover .bookmark {
-    display: block;
+    opacity: 1;
 }
 
 .unread {
@@ -234,15 +235,3 @@ input[type=submit]:active {
 .book:hover .delete {
     display: block;
 }
-
-/*
-.mainShelf {
-    z-index: ;
-    margin: -50px 0px 80px 0px;
-    height: 45px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 6px 12px 3px rgba(0, 0, 0, 0.2),
-                inset 0px -15px 0px rgba(0, 0, 0, 0.07),
-                inset 0px -2px 8px rgb(255, 255, 255);
-}
-*/
