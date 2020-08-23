@@ -4,7 +4,7 @@
         <meta charset = "UTF-8">
         <title>Library</title>
         <link href = "style.css" rel = "stylesheet"></href> 
-        <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Raleway:ital,wght@0,100;0,200;0,400;0,900;1,100;1,500;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Raleway:ital,wght@0,100;0,200;0,400;0,600;0,900;1,100;1,500;1,600;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -20,15 +20,23 @@
             <div class = "cover form">
                 <span>Add a new book</span>
                 <form>
-                    <label for="title">Title:</label>
-                    <input type="text" id="title">
-                    <label for="author">Author:</label>
-                    <input type="text" id="author">
-                    <input type="radio" name="status" id="read" value="read" checked>
-                    <label for="read">Read</label>
-                    <input type="radio" name="status" id="unread" value="unread">
-                    <label for="unread">Unread</label>
-                    <input type="submit">
+                    <div class = "inputContainer textForm">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" placeholder:>
+                    </div>
+                    <div class = "inputContainer textForm">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author">
+                    </div>
+                    <div class = "inputContainer">
+                        <input type="radio" name="status" id="read" value="read" checked>
+                        <label for="read">Read</label>
+                        <input type="radio" name="status" id="unread" value="unread">
+                        <label for="unread">Unread</label>
+                    </div>
+                    <div class = "inputContainer">
+                        <input type="submit">
+                    </div>
                 </form>
             </div>
             </div>

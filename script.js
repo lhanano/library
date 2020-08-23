@@ -29,6 +29,7 @@ class UI {
             newDeleteButton.textContent = 'X';
 
             newBook.classList.add('book');
+            newBook.classList.add('bookEffect');
             newBookCover.classList.add('cover');
             newTitle.classList.add('bookTitle');
             newAuthor.classList.add('bookAuthor');
