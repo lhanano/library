@@ -82,7 +82,7 @@ class UI {
 
 // Storage: sample books
 book1 = new Book('Eat Pray Love', 'Elizabeth Gilbert', 'read');
-book2 = new Book('The Book of Joy', 'Dalai Lama & Desmund Tutu', 'read');
+book2 = new Book('Pride & Prejudice', 'Jane Austen', 'read');
 book3 = new Book('My Life In France', 'Julia Child', 'unread');
 book4 = new Book('Little Women', 'Louisa May Alcott', 'unread')
 
